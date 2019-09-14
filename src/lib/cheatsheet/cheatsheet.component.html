@@ -1,0 +1,13 @@
+<h3 style='text-align: center'>Cheatsheet</h3>
+
+<table [hotkeys]="[['shift.?','close shift', handleHotkey,  {priority: 2}]]">
+    <tbody>
+        <tr *ngFor="let keys of this.hotkeys">
+            <td>{{ keys.key }}</td>
+
+            <td style="text-align: right">
+                <kbd>{{ keys.desc }}</kbd>
+            </td>
+        </tr>
+    </tbody>
+</table>
