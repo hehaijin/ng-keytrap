@@ -1,6 +1,6 @@
 {
   "name": "ng-keytrap",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "keywords": [
     "hotkey",
     "hotkeys",
@@ -8,6 +8,7 @@
     "keyboard",
     "shortcut"
   ],
+  "liscence": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/hehaijin/ng-keytrap"

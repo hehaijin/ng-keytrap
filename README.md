@@ -16,19 +16,21 @@ For example, you can define a shortcut key as first press a, and then press t, f
 key combos needs to be easy to remember, otherwise it is not quite useful. 
 2 keys sequence are supported. 
 
-## no external dependency. 
+## No external dependency. 
 
-## same key combo for multiple actions
-Of course, only one action will be fired at a time.
+## Same key combo for multiple actions
+Only one action will be fired at a time.
 
-
-## easy dialog support.
-when a modal dialog is opened, only accept keys that is for the dialog?
-Easy, give the hotkey a priority property.
+## Easy dialog support.
+One common use caes for keyboard shortcut is that when a dialog is opened, 
+Shortcuts on the webpage should not be activated.
+Usually you need to public some logic in the key handle function to detect if dialog is opened.
+Here, you can give a priority property to the shortcut.
+The presence of a higher priority will shield all lower priority shortcuts from activated.
 
 # Usage
 ```
-npm i ng-keyboardshortcut 
+npm i ng-keytrap
 ```
 
 ```
@@ -37,7 +39,7 @@ npm i ng-keyboardshortcut
     AppComponent
   ],
   imports: [
-    ShortcutNgModule,
+    NgKeytrapModule,
     MatDialogModule,      
     BrowserAnimationsModule,
   ],
@@ -59,9 +61,11 @@ Examples:
 ```
 
 the hotkeys directive takes an Array(or an Array of Array) of inputs. 
-each Array has 3 elements, first the key. can be a single key like 'a', or combo keys like 'alt.a', 'shift.a', 'control.a', 'meta.a'.
+each Array has 3 elements.
+first the key. can be a single key like 'a', or combo keys like 'alt.a', 'shift.a', 'control.a', 'meta.a'.
 second is description.
 third is the function name in the component.
+a forth optional element.
 
 
 In the component, you can define the function as:
