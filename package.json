@@ -1,6 +1,17 @@
 {
   "name": "ng-keytrap",
   "version": "0.0.1",
+   "keywords": [
+	"hotkey",
+	"hotkeys",
+	"angular",
+	"keyboard",
+	"shortcut"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hehaijin/ng-keytrap"
+  },
   "peerDependencies": {
     "@angular/common": "^8.2.4",
     "@angular/core": "^8.2.4",
