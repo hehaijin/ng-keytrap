@@ -39,21 +39,16 @@ export class HotkeysDirective implements OnInit, OnDestroy {
     }
   }
 
-  add(el) {
-    const f = el[0];
-    let sub;
-    if (f.includes('->')) {
-      const keys = f.split('->');
-      const key1 = keys[0];
-      const key2 = keys[1];
-      // console.log('hot keys 3', el[0], el[1],el[2]);
-      sub = this.hotkeyrepo.addSequentialShortcut(key1, key2, el[1], el[2]);
-    } else {
-      if (el.length === 4)
-        sub = this.hotkeyrepo.addShortcut(el[0], el[1], el[2], el[3]);
-      else sub = this.hotkeyrepo.addShortcut(el[0], el[1], el[2]);
-    }
-    return sub;
+
+  /**
+   * 
+   * @param el 
+   *   
+   */
+  add(el: any[]) {
+    if (el.length === 4)
+      this.hotkeyrepo.addShortcut(el[0], el[1], el[2], el[3]);
+    else this.hotkeyrepo.addShortcut(el[0], el[1], el[2]);
   }
 
 

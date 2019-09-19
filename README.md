@@ -17,6 +17,7 @@ key combos needs to be easy to remember, otherwise it is not quite useful.
 2 keys sequence are supported. 
 
 ## No external dependency. 
+Working on it.
 
 ## Same key combo for multiple actions
 Only one action will be fired at a time.
@@ -62,9 +63,15 @@ Examples:
 
 the hotkeys directive takes an Array(or an Array of Array) of inputs. 
 each Array has 3 elements.
-first the key. can be a single key like 'a', or combo keys like 'alt.a', 'shift.a', 'control.a', 'meta.a'.
-second is description.
-third is the function name in the component.
+
+
+First the key. can be a single key like 'a', or combo keys like 'alt.a', 'shift.a', 'control.a', 'meta.a'.
+
+
+Second is description.
+
+
+Third is the function name in the component.
 a forth optional element.
 
 
@@ -73,12 +80,21 @@ In the component, you can define the function as:
 ```
 testhotkey= (event: KeyboardEvent)=>{
 	event.preventDefault();  
-	event.stopPropagation();
-	
 	this.openEditDialog();
 };
 ```
 ### The arrow function format is requried as it will always be called on the component. 
+
+
+## Notes
+1. the listerner are on window object. so event.stopPropagation will be of no use.
+2. event.preventDefault will still be useful.
+3.  
+
+#### tslib dependency is automatically added by ng-packagr
+https://github.com/ng-packagr/ng-packagr/issues/1159
+
+Trying to remove it if possible. 
 
 
 
