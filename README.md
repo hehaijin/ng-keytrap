@@ -16,8 +16,6 @@ For example, you can define a shortcut key as first press a, and then press t, f
 key combos needs to be easy to remember, otherwise it is not quite useful. 
 2 keys sequence are supported. 
 
-## No external dependency. 
-Working on it.
 
 ## Same key combo for multiple actions
 Only one action will be fired at a time.
@@ -89,14 +87,6 @@ testhotkey= (event: KeyboardEvent)=>{
 ## Notes
 1. the listerner are on window object. so event.stopPropagation will be of no use.
 2. event.preventDefault will still be useful.
-3.  
-
-#### tslib dependency is automatically added by ng-packagr
-https://github.com/ng-packagr/ng-packagr/issues/1159
-
-Trying to remove it if possible. 
-
-
 
 
 

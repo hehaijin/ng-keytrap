@@ -16,6 +16,7 @@
   "peerDependencies": {
     "@angular/common": "^8.2.4",
     "@angular/core": "^8.2.4",
-    "@angular/material": "^8.2.4"
+    "@angular/material": "^8.2.4",
+    "tslib": "^1.9.0"
   }
 }
