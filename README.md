@@ -16,6 +16,7 @@ For example, you can define a shortcut key as first press a, and then press t, f
 key combos needs to be easy to remember, otherwise it is not quite useful. 
 2 keys sequence are supported. 
 
+## No external dependency. 
 
 ## Same key combo for multiple actions
 Only one action will be fired at a time.
